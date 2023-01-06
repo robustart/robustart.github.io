@@ -666,7 +666,7 @@ ul.pagination .active a {
 }
 
 .bg-light {
-  background: #fff;
+  /* background: #fff; */
 }
 
 .bg-gray {
