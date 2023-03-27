@@ -1872,21 +1872,22 @@
           <div class="section-title">
             <h2 id="challenge">Challenge</h2>
           </div>
-          <div style="font-weight: 400;">TBD</div>
-          <!-- <div style="font-weight: 400;">
-            This workshop will hold a competition about 3D vehicle recognition in the open-world scenario. Specifically,
-            the participators should design robust object detectors that could correctly recognize vehicles in the 3D
-            simulated environment under the noises such as adversarial attacks, common corruptions, etc.
-          </div>
           <div style="font-weight: 400;">
-            Our competition has 2 phases, and phase 1 will adopt white-box evaluation (detectors or data are accessible)
-            while phase 2 will adopt black-box evaluation (detectors or data are not accessible). We believe that this
-            competition will promote the physical model robustness improvement. We will release the dataset and
-            evaluation platform upon March 15, 2023. If there are some contingencies, we will introduce the other
-            third-part open-source dataset as replacement. There is no ethical considerations for our datasets. As for
-            the ethical concerns, we do not find any potential ethical risks. Regarding the evaluation approach of
-            tasks, we plan to use evaluation metrics including mean Average Precision (mAP), etc. More details could be
-            found at <a href="http://221.122.70.196/#/intro2023" style="color:blue;">AISafety</a>!
+            Deep learning models have been widely used in the field of automatic driving. However, they are vulnerable
+            against adversarial attacks which poses strong challenges on the the security of automatic driving system.
+            For example, adversaries could bring harm and challenges to the vehicle detection system by generating
+            specific attacks such as adversarial texture, camouflage, etc.
+          </div>
+          <br>
+          <div style="font-weight: 400;">
+            To accelerate the research on building robust models in the automatic driving scenario, we focus on vehicle
+            detection and organize this challenge track for motivating novel defense algorithms. Participants are
+            encouraged to develop defense methods that could improve model robustness against diverse noises in the
+            vehicle detection task on dataset we provided.
+          </div>
+          <br>
+          <div style="font-weight: 400;">For novices, you can refer to the model robustness benchmark
+            <a href="http://robust.art" target="_blank" style="color:blue;">RobustART</a>.
           </div>
           <br>
           <div style="font-weight: 400;">The timeline can be found in the following table:</div>
@@ -1897,89 +1898,63 @@
                 <td colspan="2" align="center">Challenge Timeline</td>
               </tr>
               <tr>
-                <td width="150px">Mar 15, 2023</td>
-                <td width="500px">Competion starts</td>
+                <td width="250px">2023-03-11 (UTC+8)</td>
+                <td width="500px">Registration opens</td>
               </tr>
               <tr>
-                <td>Mar 17, 2023</td>
-                <td>Phase 1 starts</td>
+                <td>2023-03-21 10:00 (UTC+8)</td>
+                <td>Phase Ⅰ submission starts</td>
               </tr>
               <tr>
-                <td>April 17, 2023</td>
-                <td>Phase 1 ends</td>
+                <td>2023-04-18 20:00 (UTC+8)</td>
+                <td>Registration and Phase Ⅰ submission deadline
+                </td>
               </tr>
               <tr>
-                <td>April 18, 2023</td>
-                <td>Phase 2 starts</td>
+                <td>2023-04-21 10:00 (UTC+8)</td>
+                <td>Phase Ⅱ submission starts</td>
               </tr>
               <tr>
-                <td>May 18, 2023</td>
-                <td>Phase 2 ends</td>
+                <td>2023-05-21 20:00 (UTC+8)</td>
+                <td>Phase Ⅱ submission deadline</td>
               </tr>
               <tr>
-                <td>May 30, 2023</td>
-                <td>Results will be released and participants will be selected to present</td>
-              </tr>
-              <tr>
-                <td>June 2023</td>
-                <td>Awards and presentation</td>
+                <td>2023-06</td>
+                <td>Results Announcement</td>
               </tr>
             </tbody>
-          </table> -->
+          </table>
 
-          <!-- <div class="left2">
-            <div class="services-box">
-              <div class="media">
-                <div class="media-body ml-4">
-                  <h4>Track I: Classification Task Defense</h4>
-                  <p class="pt-2 text-muted">
-                    Deep learning models are vulnerable against noises,
-                    e.g., adversarial attacks, which poses strong challenges
-                    on the deep learning-based applications in the
-                    real-world scenario. A large number of defenses have
-                    been proposed to mitigate the threats, however, most of
-                    them can be broken and the robustness on large-scale
-                    datasets is still far from satisfactory.
-                  </p>
-                  <p class="pt-2 text-muted">
-                    To accelerate the research on building robust models
-                    against noises, we organize this challenge track for
-                    motivating novel defense algorithms. Participants are
-                    encouraged to develop defense methods that could improve
-                    model robustness against diverse noises on large-scale
-                    dataset.
-                  </p>
-                </div>
-              </div>
-            </div>
+          <br>
+
+          <div style="font-weight: 400;">The challenge is divided into two phases:</div>
+          <br>
+          <div style="font-weight: 400;"><span style="font-weight: 900;">In Phase Ⅰ</span>, we will release the training
+            set and test set. You can use the
+            training set we provided to train or finetune your model. The training set contains 2000 images with clean
+            cars (amount from 1 to 5) generated by the CARLA simulator. The test set contains 10000 perturbed images
+            (normal environment with vehicle appearance replaced by <span style="font-weight: 900;">adversarial
+              texture</span>) with the same 5-cars amount
+            limit. <span style="font-weight: 900;">Note that we do not constrain the type and degree of attack
+              algorithms.</span>You are encouraged to
+            generate various perturbed textures based on the training set to train your robust detectors. <span
+              style="font-weight: 900;">To avoid
+              overfitting to the given test samples, we will release another test set with 10000 new perturbed images
+              one
+              day before the end of Phase Ⅰ. Finally, we will calculate the eventual Phase Ⅰ score based on 50% score on
+              the first test set and 50% score on the second test set.</span></div>
+          <br>
+          <div style="font-weight: 400;"><span style="font-weight: 900;">In Phase Ⅱ</span>, we will release the <span
+              style="font-weight: 900;">new
+              training set</span> containing
+            10000 images with clean cars (amount
+            from 1 to 10). We will use 100000 test samples with the same 100-cars amount limit to evaluate your model
+            performance. Note that the perturbations in the new test samples may be <span
+              style="font-weight: 900;">different from those in Phase Ⅰ</span>. More details could be
+            found at <a href="http://aisafety.sensetime.com/#/intro2023" target="_blank"
+              style="color:blue;">AISafety</a>
           </div>
-          <div class="right">
-            <div class="services-box">
-              <div class="media">
-                <div class="media-body ml-4">
-                  <h4>Track II: Open Set Defense</h4>
-                  <p class="pt-2 text-muted">
-                    Most defense methods aim to build robust model in the
-                    closed set (e.g., under fixed datasets with constrained
-                    perturbation types and budgets). However, in the
-                    real-world scenario, adversaries would bring more harms
-                    and challenges to the deep learning-based applications
-                    by generating unrestricted attacks, such as large and
-                    visible noises, perturbed images with unseen labels,
-                    etc.
-                  </p>
-                  <p class="pt-2 text-muted">
-                    To accelerate the research on building robust models in
-                    the open set, we organize this challenge track.
-                    Participants are encouraged to develop a robust detector
-                    that could distinguish clean examples from perturbed
-                    ones on unseen noises and classes by training on a
-                    limited-scale dataset.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div> -->
+
         </div>
       </div>
       <div align="center" style="margin-top: 20px;">
